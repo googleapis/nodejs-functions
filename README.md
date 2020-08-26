@@ -63,16 +63,15 @@ npm install @google-cloud/functions
 // eslint-disable-next-line node/no-missing-require
 const {CloudFunctionsServiceClient} = require('@google-cloud/functions');
 
-// TODO(developer): replace with your prefered project ID.
-// const projectId = 'my-project'
-
 // Creates a client
 const client = new CloudFunctionsServiceClient();
+// TODO(developer): optionally replace with your prefered project ID.
+const projectId = await client.getProjectId();
 
-// project = 'my-project/*/locations/*' // Get the functions for a project.
+const parent = `projects/${projectId}/locations/-`; // Get all the functions for a project.
 async function listFunctions() {
   const [functions] = await client.listFunctions({
-    parent: project,
+    parent: parent,
     pageSize: page_size,
     pageToken: page_token,
   });
