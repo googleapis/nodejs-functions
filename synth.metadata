@@ -34,7 +34,7 @@
       }
     }
   ],
-   "generatedFiles": [
+  "generatedFiles": [
     ".eslintignore",
     ".eslintrc.json",
     ".gitattributes",
@@ -103,5 +103,5 @@
     "test/gapic_cloud_functions_service_v1.ts",
     "tsconfig.json",
     "webpack.config.js"
-  ]
+  ] 
 }
