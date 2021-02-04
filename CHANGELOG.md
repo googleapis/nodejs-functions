@@ -1,5 +1,19 @@
 # Changelog
 
+### [1.1.2](https://www.github.com/googleapis/nodejs-functions/compare/v1.1.1...v1.1.2) (2020-11-25)
+
+
+### Bug Fixes
+
+* **browser:** check for fetch on window ([0aa94fa](https://www.github.com/googleapis/nodejs-functions/commit/0aa94fa222e4ef0bb5a09d4aa3fa957bd8cc80cf))
+
+### [1.1.1](https://www.github.com/googleapis/nodejs-functions/compare/v1.1.0...v1.1.1) (2020-11-06)
+
+
+### Bug Fixes
+
+* do not modify options object, use defaultScopes ([#38](https://www.github.com/googleapis/nodejs-functions/issues/38)) ([24738f1](https://www.github.com/googleapis/nodejs-functions/commit/24738f112727b56fc180b2ad3280456ccabd1af8))
+
 ## [1.1.0](https://www.github.com/googleapis/nodejs-functions/compare/v1.0.1...v1.1.0) (2020-09-01)
 
 
