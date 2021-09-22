@@ -12,34 +12,23 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
 'use strict';
 
-function main() {
-  // [START functions_list_functions_sample]
+function main(resource) {
+  // [START functions_get_iam_policy_sample]
   /**
    * TODO(developer): Uncomment these variables before running the sample.
    */
   /**
-   *  The project and location from which the function should be listed,
-   *  specified in the format `projects/* /locations/*`
-   *  If you want to list functions in all locations, use "-" in place of a
-   *  location. When listing functions in all locations, if one or more
-   *  location(s) are unreachable, the response will contain functions from all
-   *  reachable locations along with the names of any unreachable locations.
+   *  REQUIRED: The resource for which the policy is being requested.
+   *  See the operation documentation for the appropriate value for this field.
    */
-  // const parent = 'abc123'
+  // const resource = 'abc123'
   /**
-   *  Maximum number of functions to return per call.
+   *  OPTIONAL: A `GetPolicyOptions` object for specifying options to
+   *  `GetIamPolicy`. This field is only used by Cloud IAM.
    */
-  // const pageSize = 1234
-  /**
-   *  The value returned by the last
-   *  `ListFunctionsResponse`; indicates that
-   *  this is a continuation of a prior `ListFunctions` call, and that the
-   *  system should return the next page of data.
-   */
-  // const pageToken = 'abc123'
+  // const options = ''
 
   // Imports the Functions library
   const {CloudFunctionsServiceClient} = require('@google-cloud/functions').v1;
@@ -47,20 +36,19 @@ function main() {
   // Instantiates a client
   const functionsClient = new CloudFunctionsServiceClient();
 
-  async function listFunctions() {
+  async function getIamPolicy() {
     // Construct request
     const request = {
+      resource,
     };
 
     // Run request
-    const iterable = await functionsClient.listFunctionsAsync(request);
-    for await (const response of iterable) {
-        console.log(response);
-    }
+    const response = await functionsClient.getIamPolicy(request);
+    console.log(response);
   }
 
-  listFunctions();
-  // [END functions_list_functions_sample]
+  getIamPolicy();
+  // [END functions_get_iam_policy_sample]
 }
 
 process.on('unhandledRejection', err => {

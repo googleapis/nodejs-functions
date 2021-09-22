@@ -12,24 +12,25 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
 'use strict';
 
-function main(resource) {
-  // [START functions_get_iam_policy_sample]
+function main(resource, policy) {
+  // [START functions_set_iam_policy_sample]
   /**
    * TODO(developer): Uncomment these variables before running the sample.
    */
   /**
-   *  REQUIRED: The resource for which the policy is being requested.
+   *  REQUIRED: The resource for which the policy is being specified.
    *  See the operation documentation for the appropriate value for this field.
    */
   // const resource = 'abc123'
   /**
-   *  OPTIONAL: A `GetPolicyOptions` object for specifying options to
-   *  `GetIamPolicy`. This field is only used by Cloud IAM.
+   *  REQUIRED: The complete policy to be applied to the `resource`. The size of
+   *  the policy is limited to a few 10s of KB. An empty policy is a
+   *  valid policy but certain Cloud Platform services (such as Projects)
+   *  might reject them.
    */
-  // const options = ''
+  // const policy = ''
 
   // Imports the Functions library
   const {CloudFunctionsServiceClient} = require('@google-cloud/functions').v1;
@@ -37,19 +38,20 @@ function main(resource) {
   // Instantiates a client
   const functionsClient = new CloudFunctionsServiceClient();
 
-  async function getIamPolicy() {
+  async function setIamPolicy() {
     // Construct request
     const request = {
       resource,
+      policy,
     };
 
     // Run request
-    const response = await functionsClient.getIamPolicy(request);
+    const response = await functionsClient.setIamPolicy(request);
     console.log(response);
   }
 
-  getIamPolicy();
-  // [END functions_get_iam_policy_sample]
+  setIamPolicy();
+  // [END functions_set_iam_policy_sample]
 }
 
 process.on('unhandledRejection', err => {

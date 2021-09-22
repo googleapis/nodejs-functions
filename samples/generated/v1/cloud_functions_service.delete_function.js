@@ -12,22 +12,17 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
 'use strict';
 
-function main(name, data) {
-  // [START functions_call_function_sample]
+function main(name) {
+  // [START functions_delete_function_sample]
   /**
    * TODO(developer): Uncomment these variables before running the sample.
    */
   /**
-   *  Required. The name of the function to be called.
+   *  Required. The name of the function which should be deleted.
    */
   // const name = 'abc123'
-  /**
-   *  Required. Input to be passed to the function.
-   */
-  // const data = 'abc123'
 
   // Imports the Functions library
   const {CloudFunctionsServiceClient} = require('@google-cloud/functions').v1;
@@ -35,20 +30,20 @@ function main(name, data) {
   // Instantiates a client
   const functionsClient = new CloudFunctionsServiceClient();
 
-  async function callFunction() {
+  async function deleteFunction() {
     // Construct request
     const request = {
       name,
-      data,
     };
 
     // Run request
-    const response = await functionsClient.callFunction(request);
+    const [operation] = await functionsClient.deleteFunction(request);
+    const [response] = await operation.promise();
     console.log(response);
   }
 
-  callFunction();
-  // [END functions_call_function_sample]
+  deleteFunction();
+  // [END functions_delete_function_sample]
 }
 
 process.on('unhandledRejection', err => {

@@ -12,18 +12,25 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
 'use strict';
 
-function main(name) {
-  // [START functions_delete_function_sample]
+function main(resource, permissions) {
+  // [START functions_test_iam_permissions_sample]
   /**
    * TODO(developer): Uncomment these variables before running the sample.
    */
   /**
-   *  Required. The name of the function which should be deleted.
+   *  REQUIRED: The resource for which the policy detail is being requested.
+   *  See the operation documentation for the appropriate value for this field.
    */
-  // const name = 'abc123'
+  // const resource = 'abc123'
+  /**
+   *  The set of permissions to check for the `resource`. Permissions with
+   *  wildcards (such as '*' or 'storage.*') are not allowed. For more
+   *  information see
+   *  [IAM Overview](https://cloud.google.com/iam/docs/overview#permissions).
+   */
+  // const permissions = 'abc123'
 
   // Imports the Functions library
   const {CloudFunctionsServiceClient} = require('@google-cloud/functions').v1;
@@ -31,20 +38,20 @@ function main(name) {
   // Instantiates a client
   const functionsClient = new CloudFunctionsServiceClient();
 
-  async function deleteFunction() {
+  async function testIamPermissions() {
     // Construct request
     const request = {
-      name,
+      resource,
+      permissions,
     };
 
     // Run request
-    const [operation] = await functionsClient.deleteFunction(request);
-    const [response] = await operation.promise();
+    const response = await functionsClient.testIamPermissions(request);
     console.log(response);
   }
 
-  deleteFunction();
-  // [END functions_delete_function_sample]
+  testIamPermissions();
+  // [END functions_test_iam_permissions_sample]
 }
 
 process.on('unhandledRejection', err => {
