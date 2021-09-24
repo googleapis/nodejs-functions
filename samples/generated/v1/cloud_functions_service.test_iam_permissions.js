@@ -12,26 +12,25 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
 'use strict';
 
-function main(resource, policy) {
-  // [START functions_v1_generated_CloudFunctionsService_SetIamPolicy_async]
+function main(resource, permissions) {
+  // [START functions_v1_generated_CloudFunctionsService_TestIamPermissions_async]
   /**
    * TODO(developer): Uncomment these variables before running the sample.
    */
   /**
-   *  REQUIRED: The resource for which the policy is being specified.
+   *  REQUIRED: The resource for which the policy detail is being requested.
    *  See the operation documentation for the appropriate value for this field.
    */
   // const resource = 'abc123'
   /**
-   *  REQUIRED: The complete policy to be applied to the `resource`. The size of
-   *  the policy is limited to a few 10s of KB. An empty policy is a
-   *  valid policy but certain Cloud Platform services (such as Projects)
-   *  might reject them.
+   *  The set of permissions to check for the `resource`. Permissions with
+   *  wildcards (such as '*' or 'storage.*') are not allowed. For more
+   *  information see
+   *  [IAM Overview](https://cloud.google.com/iam/docs/overview#permissions).
    */
-  // const policy = ''
+  // const permissions = 'abc123'
 
   // Imports the Functions library
   const {CloudFunctionsServiceClient} = require('@google-cloud/functions').v1;
@@ -39,20 +38,20 @@ function main(resource, policy) {
   // Instantiates a client
   const functionsClient = new CloudFunctionsServiceClient();
 
-  async function setIamPolicy() {
+  async function testIamPermissions() {
     // Construct request
     const request = {
       resource,
-      policy,
+      permissions,
     };
 
     // Run request
-    const response = await functionsClient.setIamPolicy(request);
+    const response = await functionsClient.testIamPermissions(request);
     console.log(response);
   }
 
-  setIamPolicy();
-  // [END functions_v1_generated_CloudFunctionsService_SetIamPolicy_async]
+  testIamPermissions();
+  // [END functions_v1_generated_CloudFunctionsService_TestIamPermissions_async]
 }
 
 process.on('unhandledRejection', err => {

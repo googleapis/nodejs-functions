@@ -12,26 +12,18 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
 'use strict';
 
-function main(resource, permissions) {
-  // [START functions_v1_generated_CloudFunctionsService_TestIamPermissions_async]
+function main() {
+  // [START functions_v1_generated_CloudFunctionsService_GenerateUploadUrl_async]
   /**
    * TODO(developer): Uncomment these variables before running the sample.
    */
   /**
-   *  REQUIRED: The resource for which the policy detail is being requested.
-   *  See the operation documentation for the appropriate value for this field.
+   *  The project and location in which the Google Cloud Storage signed URL
+   *  should be generated, specified in the format `projects/* /locations/*`.
    */
-  // const resource = 'abc123'
-  /**
-   *  The set of permissions to check for the `resource`. Permissions with
-   *  wildcards (such as '*' or 'storage.*') are not allowed. For more
-   *  information see
-   *  [IAM Overview](https://cloud.google.com/iam/docs/overview#permissions).
-   */
-  // const permissions = 'abc123'
+  // const parent = 'abc123'
 
   // Imports the Functions library
   const {CloudFunctionsServiceClient} = require('@google-cloud/functions').v1;
@@ -39,20 +31,17 @@ function main(resource, permissions) {
   // Instantiates a client
   const functionsClient = new CloudFunctionsServiceClient();
 
-  async function testIamPermissions() {
+  async function generateUploadUrl() {
     // Construct request
-    const request = {
-      resource,
-      permissions,
-    };
+    const request = {};
 
     // Run request
-    const response = await functionsClient.testIamPermissions(request);
+    const response = await functionsClient.generateUploadUrl(request);
     console.log(response);
   }
 
-  testIamPermissions();
-  // [END functions_v1_generated_CloudFunctionsService_TestIamPermissions_async]
+  generateUploadUrl();
+  // [END functions_v1_generated_CloudFunctionsService_GenerateUploadUrl_async]
 }
 
 process.on('unhandledRejection', err => {

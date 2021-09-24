@@ -12,18 +12,23 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
 'use strict';
 
-function main(name) {
-  // [START functions_v1_generated_CloudFunctionsService_DeleteFunction_async]
+function main() {
+  // [START functions_v1_generated_CloudFunctionsService_GenerateDownloadUrl_async]
   /**
    * TODO(developer): Uncomment these variables before running the sample.
    */
   /**
-   *  Required. The name of the function which should be deleted.
+   *  The name of function for which source code Google Cloud Storage signed
+   *  URL should be generated.
    */
   // const name = 'abc123'
+  /**
+   *  The optional version of function. If not set, default, current version
+   *  is used.
+   */
+  // const versionId = 1234
 
   // Imports the Functions library
   const {CloudFunctionsServiceClient} = require('@google-cloud/functions').v1;
@@ -31,20 +36,17 @@ function main(name) {
   // Instantiates a client
   const functionsClient = new CloudFunctionsServiceClient();
 
-  async function deleteFunction() {
+  async function generateDownloadUrl() {
     // Construct request
-    const request = {
-      name,
-    };
+    const request = {};
 
     // Run request
-    const [operation] = await functionsClient.deleteFunction(request);
-    const [response] = await operation.promise();
+    const response = await functionsClient.generateDownloadUrl(request);
     console.log(response);
   }
 
-  deleteFunction();
-  // [END functions_v1_generated_CloudFunctionsService_DeleteFunction_async]
+  generateDownloadUrl();
+  // [END functions_v1_generated_CloudFunctionsService_GenerateDownloadUrl_async]
 }
 
 process.on('unhandledRejection', err => {
