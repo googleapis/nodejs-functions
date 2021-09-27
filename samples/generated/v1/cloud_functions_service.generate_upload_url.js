@@ -12,24 +12,18 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
 'use strict';
 
-function main(resource) {
-  // [START cloudfunctions_v1_generated_CloudFunctionsService_GetIamPolicy_async]
+function main() {
+  // [START cloudfunctions_v1_generated_CloudFunctionsService_GenerateUploadUrl_async]
   /**
    * TODO(developer): Uncomment these variables before running the sample.
    */
   /**
-   *  REQUIRED: The resource for which the policy is being requested.
-   *  See the operation documentation for the appropriate value for this field.
+   *  The project and location in which the Google Cloud Storage signed URL
+   *  should be generated, specified in the format `projects/* /locations/*`.
    */
-  // const resource = 'abc123'
-  /**
-   *  OPTIONAL: A `GetPolicyOptions` object for specifying options to
-   *  `GetIamPolicy`. This field is only used by Cloud IAM.
-   */
-  // const options = ''
+  // const parent = 'abc123'
 
   // Imports the Functions library
   const {CloudFunctionsServiceClient} = require('@google-cloud/functions').v1;
@@ -37,19 +31,17 @@ function main(resource) {
   // Instantiates a client
   const functionsClient = new CloudFunctionsServiceClient();
 
-  async function getIamPolicy() {
+  async function generateUploadUrl() {
     // Construct request
-    const request = {
-      resource,
-    };
+    const request = {};
 
     // Run request
-    const response = await functionsClient.getIamPolicy(request);
+    const response = await functionsClient.generateUploadUrl(request);
     console.log(response);
   }
 
-  getIamPolicy();
-  // [END cloudfunctions_v1_generated_CloudFunctionsService_GetIamPolicy_async]
+  generateUploadUrl();
+  // [END cloudfunctions_v1_generated_CloudFunctionsService_GenerateUploadUrl_async]
 }
 
 process.on('unhandledRejection', err => {

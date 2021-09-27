@@ -12,7 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
 'use strict';
 
 function main() {
@@ -49,13 +48,12 @@ function main() {
 
   async function listFunctions() {
     // Construct request
-    const request = {
-    };
+    const request = {};
 
     // Run request
     const iterable = await functionsClient.listFunctionsAsync(request);
     for await (const response of iterable) {
-        console.log(response);
+      console.log(response);
     }
   }
 
