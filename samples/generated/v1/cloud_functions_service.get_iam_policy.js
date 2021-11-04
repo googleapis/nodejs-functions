@@ -12,18 +12,23 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
 'use strict';
 
-function main(name) {
-  // [START cloudfunctions_v1_generated_CloudFunctionsService_GetFunction_async]
+function main(resource) {
+  // [START cloudfunctions_v1_generated_CloudFunctionsService_GetIamPolicy_async]
   /**
    * TODO(developer): Uncomment these variables before running the sample.
    */
   /**
-   *  Required. The name of the function which details should be obtained.
+   *  REQUIRED: The resource for which the policy is being requested.
+   *  See the operation documentation for the appropriate value for this field.
    */
-  // const name = 'abc123'
+  // const resource = 'abc123'
+  /**
+   *  OPTIONAL: A `GetPolicyOptions` object for specifying options to
+   *  `GetIamPolicy`. This field is only used by Cloud IAM.
+   */
+  // const options = ''
 
   // Imports the Functions library
   const {CloudFunctionsServiceClient} = require('@google-cloud/functions').v1;
@@ -31,19 +36,19 @@ function main(name) {
   // Instantiates a client
   const functionsClient = new CloudFunctionsServiceClient();
 
-  async function getFunction() {
+  async function getIamPolicy() {
     // Construct request
     const request = {
-      name,
+      resource,
     };
 
     // Run request
-    const response = await functionsClient.getFunction(request);
+    const response = await functionsClient.getIamPolicy(request);
     console.log(response);
   }
 
-  getFunction();
-  // [END cloudfunctions_v1_generated_CloudFunctionsService_GetFunction_async]
+  getIamPolicy();
+  // [END cloudfunctions_v1_generated_CloudFunctionsService_GetIamPolicy_async]
 }
 
 process.on('unhandledRejection', err => {
