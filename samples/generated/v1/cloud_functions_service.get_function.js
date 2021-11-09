@@ -12,26 +12,17 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
 'use strict';
 
-function main(resource, policy) {
-  // [START cloudfunctions_v1_generated_CloudFunctionsService_SetIamPolicy_async]
+function main(name) {
+  // [START cloudfunctions_v1_generated_CloudFunctionsService_GetFunction_async]
   /**
    * TODO(developer): Uncomment these variables before running the sample.
    */
   /**
-   *  REQUIRED: The resource for which the policy is being specified.
-   *  See the operation documentation for the appropriate value for this field.
+   *  Required. The name of the function which details should be obtained.
    */
-  // const resource = 'abc123'
-  /**
-   *  REQUIRED: The complete policy to be applied to the `resource`. The size of
-   *  the policy is limited to a few 10s of KB. An empty policy is a
-   *  valid policy but certain Cloud Platform services (such as Projects)
-   *  might reject them.
-   */
-  // const policy = {}
+  // const name = 'abc123'
 
   // Imports the Functions library
   const {CloudFunctionsServiceClient} = require('@google-cloud/functions').v1;
@@ -39,20 +30,19 @@ function main(resource, policy) {
   // Instantiates a client
   const functionsClient = new CloudFunctionsServiceClient();
 
-  async function callSetIamPolicy() {
+  async function callGetFunction() {
     // Construct request
     const request = {
-      resource,
-      policy,
+      name,
     };
 
     // Run request
-    const response = await functionsClient.setIamPolicy(request);
+    const response = await functionsClient.getFunction(request);
     console.log(response);
   }
 
-  callSetIamPolicy();
-  // [END cloudfunctions_v1_generated_CloudFunctionsService_SetIamPolicy_async]
+  callGetFunction();
+  // [END cloudfunctions_v1_generated_CloudFunctionsService_GetFunction_async]
 }
 
 process.on('unhandledRejection', err => {

@@ -12,23 +12,17 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
 'use strict';
 
-function main(location, function1) {
-  // [START cloudfunctions_v1_generated_CloudFunctionsService_CreateFunction_async]
+function main(name) {
+  // [START cloudfunctions_v1_generated_CloudFunctionsService_DeleteFunction_async]
   /**
    * TODO(developer): Uncomment these variables before running the sample.
    */
   /**
-   *  Required. The project and location in which the function should be created, specified
-   *  in the format `projects/* /locations/*`
+   *  Required. The name of the function which should be deleted.
    */
-  // const location = 'abc123'
-  /**
-   *  Required. Function to be created.
-   */
-  // const function = {}
+  // const name = 'abc123'
 
   // Imports the Functions library
   const {CloudFunctionsServiceClient} = require('@google-cloud/functions').v1;
@@ -36,21 +30,20 @@ function main(location, function1) {
   // Instantiates a client
   const functionsClient = new CloudFunctionsServiceClient();
 
-  async function callCreateFunction() {
+  async function callDeleteFunction() {
     // Construct request
     const request = {
-      location,
-      function1,
+      name,
     };
 
     // Run request
-    const [operation] = await functionsClient.createFunction(request);
+    const [operation] = await functionsClient.deleteFunction(request);
     const [response] = await operation.promise();
     console.log(response);
   }
 
-  callCreateFunction();
-  // [END cloudfunctions_v1_generated_CloudFunctionsService_CreateFunction_async]
+  callDeleteFunction();
+  // [END cloudfunctions_v1_generated_CloudFunctionsService_DeleteFunction_async]
 }
 
 process.on('unhandledRejection', err => {

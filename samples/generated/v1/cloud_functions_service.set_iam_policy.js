@@ -12,22 +12,25 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
 'use strict';
 
-function main(function1) {
-  // [START cloudfunctions_v1_generated_CloudFunctionsService_UpdateFunction_async]
+function main(resource, policy) {
+  // [START cloudfunctions_v1_generated_CloudFunctionsService_SetIamPolicy_async]
   /**
    * TODO(developer): Uncomment these variables before running the sample.
    */
   /**
-   *  Required. New version of the function.
+   *  REQUIRED: The resource for which the policy is being specified.
+   *  See the operation documentation for the appropriate value for this field.
    */
-  // const function = {}
+  // const resource = 'abc123'
   /**
-   *  Required list of fields to be updated in this request.
+   *  REQUIRED: The complete policy to be applied to the `resource`. The size of
+   *  the policy is limited to a few 10s of KB. An empty policy is a
+   *  valid policy but certain Cloud Platform services (such as Projects)
+   *  might reject them.
    */
-  // const updateMask = {}
+  // const policy = {}
 
   // Imports the Functions library
   const {CloudFunctionsServiceClient} = require('@google-cloud/functions').v1;
@@ -35,20 +38,20 @@ function main(function1) {
   // Instantiates a client
   const functionsClient = new CloudFunctionsServiceClient();
 
-  async function callUpdateFunction() {
+  async function callSetIamPolicy() {
     // Construct request
     const request = {
-      function1,
+      resource,
+      policy,
     };
 
     // Run request
-    const [operation] = await functionsClient.updateFunction(request);
-    const [response] = await operation.promise();
+    const response = await functionsClient.setIamPolicy(request);
     console.log(response);
   }
 
-  callUpdateFunction();
-  // [END cloudfunctions_v1_generated_CloudFunctionsService_UpdateFunction_async]
+  callSetIamPolicy();
+  // [END cloudfunctions_v1_generated_CloudFunctionsService_SetIamPolicy_async]
 }
 
 process.on('unhandledRejection', err => {

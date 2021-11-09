@@ -12,22 +12,23 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
 'use strict';
 
-function main(name, data) {
-  // [START cloudfunctions_v1_generated_CloudFunctionsService_CallFunction_async]
+function main() {
+  // [START cloudfunctions_v1_generated_CloudFunctionsService_GenerateDownloadUrl_async]
   /**
    * TODO(developer): Uncomment these variables before running the sample.
    */
   /**
-   *  Required. The name of the function to be called.
+   *  The name of function for which source code Google Cloud Storage signed
+   *  URL should be generated.
    */
   // const name = 'abc123'
   /**
-   *  Required. Input to be passed to the function.
+   *  The optional version of function. If not set, default, current version
+   *  is used.
    */
-  // const data = 'abc123'
+  // const versionId = 1234
 
   // Imports the Functions library
   const {CloudFunctionsServiceClient} = require('@google-cloud/functions').v1;
@@ -35,20 +36,17 @@ function main(name, data) {
   // Instantiates a client
   const functionsClient = new CloudFunctionsServiceClient();
 
-  async function callCallFunction() {
+  async function callGenerateDownloadUrl() {
     // Construct request
-    const request = {
-      name,
-      data,
-    };
+    const request = {};
 
     // Run request
-    const response = await functionsClient.callFunction(request);
+    const response = await functionsClient.generateDownloadUrl(request);
     console.log(response);
   }
 
-  callCallFunction();
-  // [END cloudfunctions_v1_generated_CloudFunctionsService_CallFunction_async]
+  callGenerateDownloadUrl();
+  // [END cloudfunctions_v1_generated_CloudFunctionsService_GenerateDownloadUrl_async]
 }
 
 process.on('unhandledRejection', err => {
