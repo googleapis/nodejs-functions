@@ -12,6 +12,6 @@
   "codeowner_team": "@googleapis/serverless-team",
   "default_version": "v1",
   "language": "nodejs",
-  "api_shortname": "nodejs-functions",
+  "api_shortname": "cloudfunctions",
   "library_type": "GAPIC_AUTO"
 }
