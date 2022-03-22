@@ -1698,7 +1698,7 @@ export class CloudFunctionsServiceClient {
     return this.pathTemplates.cloudFunctionPathTemplate.render({
       project: project,
       location: location,
-      function: function_Param,
+      function: functionParam,
     });
   }
 
