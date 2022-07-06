@@ -17,13 +17,14 @@
 // ** All changes to this file may be overwritten. **
 
 import * as v1 from './v1';
+import * as v2 from './v2';
 import * as v2alpha from './v2alpha';
 import * as v2beta from './v2beta';
 
 const CloudFunctionsServiceClient = v1.CloudFunctionsServiceClient;
 type CloudFunctionsServiceClient = v1.CloudFunctionsServiceClient;
 
-export {v1, v2alpha, v2beta, CloudFunctionsServiceClient};
-export default {v1, v2alpha, v2beta, CloudFunctionsServiceClient};
+export {v1, v2, v2alpha, v2beta, CloudFunctionsServiceClient};
+export default {v1, v2, v2alpha, v2beta, CloudFunctionsServiceClient};
 import * as protos from '../protos/protos';
 export {protos};
