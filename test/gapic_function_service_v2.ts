@@ -275,7 +275,10 @@ describe('v2.FunctionServiceClient', () => {
       const request = generateSampleMessage(
         new protos.google.cloud.functions.v2.GetFunctionRequest()
       );
-      const defaultValue1 = getTypeDefaultValue('GetFunctionRequest', ['name']);
+      const defaultValue1 = getTypeDefaultValue(
+        '.google.cloud.functions.v2.GetFunctionRequest',
+        ['name']
+      );
       request.name = defaultValue1;
       const expectedHeaderRequestParams = `name=${defaultValue1}`;
       const expectedResponse = generateSampleMessage(
@@ -303,7 +306,10 @@ describe('v2.FunctionServiceClient', () => {
       const request = generateSampleMessage(
         new protos.google.cloud.functions.v2.GetFunctionRequest()
       );
-      const defaultValue1 = getTypeDefaultValue('GetFunctionRequest', ['name']);
+      const defaultValue1 = getTypeDefaultValue(
+        '.google.cloud.functions.v2.GetFunctionRequest',
+        ['name']
+      );
       request.name = defaultValue1;
       const expectedHeaderRequestParams = `name=${defaultValue1}`;
       const expectedResponse = generateSampleMessage(
@@ -347,7 +353,10 @@ describe('v2.FunctionServiceClient', () => {
       const request = generateSampleMessage(
         new protos.google.cloud.functions.v2.GetFunctionRequest()
       );
-      const defaultValue1 = getTypeDefaultValue('GetFunctionRequest', ['name']);
+      const defaultValue1 = getTypeDefaultValue(
+        '.google.cloud.functions.v2.GetFunctionRequest',
+        ['name']
+      );
       request.name = defaultValue1;
       const expectedHeaderRequestParams = `name=${defaultValue1}`;
       const expectedError = new Error('expected');
@@ -375,7 +384,10 @@ describe('v2.FunctionServiceClient', () => {
       const request = generateSampleMessage(
         new protos.google.cloud.functions.v2.GetFunctionRequest()
       );
-      const defaultValue1 = getTypeDefaultValue('GetFunctionRequest', ['name']);
+      const defaultValue1 = getTypeDefaultValue(
+        '.google.cloud.functions.v2.GetFunctionRequest',
+        ['name']
+      );
       request.name = defaultValue1;
       const expectedError = new Error('The client has already been closed.');
       client.close();
@@ -393,9 +405,10 @@ describe('v2.FunctionServiceClient', () => {
       const request = generateSampleMessage(
         new protos.google.cloud.functions.v2.GenerateUploadUrlRequest()
       );
-      const defaultValue1 = getTypeDefaultValue('GenerateUploadUrlRequest', [
-        'parent',
-      ]);
+      const defaultValue1 = getTypeDefaultValue(
+        '.google.cloud.functions.v2.GenerateUploadUrlRequest',
+        ['parent']
+      );
       request.parent = defaultValue1;
       const expectedHeaderRequestParams = `parent=${defaultValue1}`;
       const expectedResponse = generateSampleMessage(
@@ -423,9 +436,10 @@ describe('v2.FunctionServiceClient', () => {
       const request = generateSampleMessage(
         new protos.google.cloud.functions.v2.GenerateUploadUrlRequest()
       );
-      const defaultValue1 = getTypeDefaultValue('GenerateUploadUrlRequest', [
-        'parent',
-      ]);
+      const defaultValue1 = getTypeDefaultValue(
+        '.google.cloud.functions.v2.GenerateUploadUrlRequest',
+        ['parent']
+      );
       request.parent = defaultValue1;
       const expectedHeaderRequestParams = `parent=${defaultValue1}`;
       const expectedResponse = generateSampleMessage(
@@ -469,9 +483,10 @@ describe('v2.FunctionServiceClient', () => {
       const request = generateSampleMessage(
         new protos.google.cloud.functions.v2.GenerateUploadUrlRequest()
       );
-      const defaultValue1 = getTypeDefaultValue('GenerateUploadUrlRequest', [
-        'parent',
-      ]);
+      const defaultValue1 = getTypeDefaultValue(
+        '.google.cloud.functions.v2.GenerateUploadUrlRequest',
+        ['parent']
+      );
       request.parent = defaultValue1;
       const expectedHeaderRequestParams = `parent=${defaultValue1}`;
       const expectedError = new Error('expected');
@@ -499,9 +514,10 @@ describe('v2.FunctionServiceClient', () => {
       const request = generateSampleMessage(
         new protos.google.cloud.functions.v2.GenerateUploadUrlRequest()
       );
-      const defaultValue1 = getTypeDefaultValue('GenerateUploadUrlRequest', [
-        'parent',
-      ]);
+      const defaultValue1 = getTypeDefaultValue(
+        '.google.cloud.functions.v2.GenerateUploadUrlRequest',
+        ['parent']
+      );
       request.parent = defaultValue1;
       const expectedError = new Error('The client has already been closed.');
       client.close();
@@ -519,9 +535,10 @@ describe('v2.FunctionServiceClient', () => {
       const request = generateSampleMessage(
         new protos.google.cloud.functions.v2.GenerateDownloadUrlRequest()
       );
-      const defaultValue1 = getTypeDefaultValue('GenerateDownloadUrlRequest', [
-        'name',
-      ]);
+      const defaultValue1 = getTypeDefaultValue(
+        '.google.cloud.functions.v2.GenerateDownloadUrlRequest',
+        ['name']
+      );
       request.name = defaultValue1;
       const expectedHeaderRequestParams = `name=${defaultValue1}`;
       const expectedResponse = generateSampleMessage(
@@ -550,9 +567,10 @@ describe('v2.FunctionServiceClient', () => {
       const request = generateSampleMessage(
         new protos.google.cloud.functions.v2.GenerateDownloadUrlRequest()
       );
-      const defaultValue1 = getTypeDefaultValue('GenerateDownloadUrlRequest', [
-        'name',
-      ]);
+      const defaultValue1 = getTypeDefaultValue(
+        '.google.cloud.functions.v2.GenerateDownloadUrlRequest',
+        ['name']
+      );
       request.name = defaultValue1;
       const expectedHeaderRequestParams = `name=${defaultValue1}`;
       const expectedResponse = generateSampleMessage(
@@ -596,9 +614,10 @@ describe('v2.FunctionServiceClient', () => {
       const request = generateSampleMessage(
         new protos.google.cloud.functions.v2.GenerateDownloadUrlRequest()
       );
-      const defaultValue1 = getTypeDefaultValue('GenerateDownloadUrlRequest', [
-        'name',
-      ]);
+      const defaultValue1 = getTypeDefaultValue(
+        '.google.cloud.functions.v2.GenerateDownloadUrlRequest',
+        ['name']
+      );
       request.name = defaultValue1;
       const expectedHeaderRequestParams = `name=${defaultValue1}`;
       const expectedError = new Error('expected');
@@ -626,9 +645,10 @@ describe('v2.FunctionServiceClient', () => {
       const request = generateSampleMessage(
         new protos.google.cloud.functions.v2.GenerateDownloadUrlRequest()
       );
-      const defaultValue1 = getTypeDefaultValue('GenerateDownloadUrlRequest', [
-        'name',
-      ]);
+      const defaultValue1 = getTypeDefaultValue(
+        '.google.cloud.functions.v2.GenerateDownloadUrlRequest',
+        ['name']
+      );
       request.name = defaultValue1;
       const expectedError = new Error('The client has already been closed.');
       client.close();
@@ -646,9 +666,10 @@ describe('v2.FunctionServiceClient', () => {
       const request = generateSampleMessage(
         new protos.google.cloud.functions.v2.ListRuntimesRequest()
       );
-      const defaultValue1 = getTypeDefaultValue('ListRuntimesRequest', [
-        'parent',
-      ]);
+      const defaultValue1 = getTypeDefaultValue(
+        '.google.cloud.functions.v2.ListRuntimesRequest',
+        ['parent']
+      );
       request.parent = defaultValue1;
       const expectedHeaderRequestParams = `parent=${defaultValue1}`;
       const expectedResponse = generateSampleMessage(
@@ -676,9 +697,10 @@ describe('v2.FunctionServiceClient', () => {
       const request = generateSampleMessage(
         new protos.google.cloud.functions.v2.ListRuntimesRequest()
       );
-      const defaultValue1 = getTypeDefaultValue('ListRuntimesRequest', [
-        'parent',
-      ]);
+      const defaultValue1 = getTypeDefaultValue(
+        '.google.cloud.functions.v2.ListRuntimesRequest',
+        ['parent']
+      );
       request.parent = defaultValue1;
       const expectedHeaderRequestParams = `parent=${defaultValue1}`;
       const expectedResponse = generateSampleMessage(
@@ -722,9 +744,10 @@ describe('v2.FunctionServiceClient', () => {
       const request = generateSampleMessage(
         new protos.google.cloud.functions.v2.ListRuntimesRequest()
       );
-      const defaultValue1 = getTypeDefaultValue('ListRuntimesRequest', [
-        'parent',
-      ]);
+      const defaultValue1 = getTypeDefaultValue(
+        '.google.cloud.functions.v2.ListRuntimesRequest',
+        ['parent']
+      );
       request.parent = defaultValue1;
       const expectedHeaderRequestParams = `parent=${defaultValue1}`;
       const expectedError = new Error('expected');
@@ -752,9 +775,10 @@ describe('v2.FunctionServiceClient', () => {
       const request = generateSampleMessage(
         new protos.google.cloud.functions.v2.ListRuntimesRequest()
       );
-      const defaultValue1 = getTypeDefaultValue('ListRuntimesRequest', [
-        'parent',
-      ]);
+      const defaultValue1 = getTypeDefaultValue(
+        '.google.cloud.functions.v2.ListRuntimesRequest',
+        ['parent']
+      );
       request.parent = defaultValue1;
       const expectedError = new Error('The client has already been closed.');
       client.close();
@@ -772,9 +796,10 @@ describe('v2.FunctionServiceClient', () => {
       const request = generateSampleMessage(
         new protos.google.cloud.functions.v2.CreateFunctionRequest()
       );
-      const defaultValue1 = getTypeDefaultValue('CreateFunctionRequest', [
-        'parent',
-      ]);
+      const defaultValue1 = getTypeDefaultValue(
+        '.google.cloud.functions.v2.CreateFunctionRequest',
+        ['parent']
+      );
       request.parent = defaultValue1;
       const expectedHeaderRequestParams = `parent=${defaultValue1}`;
       const expectedResponse = generateSampleMessage(
@@ -804,9 +829,10 @@ describe('v2.FunctionServiceClient', () => {
       const request = generateSampleMessage(
         new protos.google.cloud.functions.v2.CreateFunctionRequest()
       );
-      const defaultValue1 = getTypeDefaultValue('CreateFunctionRequest', [
-        'parent',
-      ]);
+      const defaultValue1 = getTypeDefaultValue(
+        '.google.cloud.functions.v2.CreateFunctionRequest',
+        ['parent']
+      );
       request.parent = defaultValue1;
       const expectedHeaderRequestParams = `parent=${defaultValue1}`;
       const expectedResponse = generateSampleMessage(
@@ -857,9 +883,10 @@ describe('v2.FunctionServiceClient', () => {
       const request = generateSampleMessage(
         new protos.google.cloud.functions.v2.CreateFunctionRequest()
       );
-      const defaultValue1 = getTypeDefaultValue('CreateFunctionRequest', [
-        'parent',
-      ]);
+      const defaultValue1 = getTypeDefaultValue(
+        '.google.cloud.functions.v2.CreateFunctionRequest',
+        ['parent']
+      );
       request.parent = defaultValue1;
       const expectedHeaderRequestParams = `parent=${defaultValue1}`;
       const expectedError = new Error('expected');
@@ -887,9 +914,10 @@ describe('v2.FunctionServiceClient', () => {
       const request = generateSampleMessage(
         new protos.google.cloud.functions.v2.CreateFunctionRequest()
       );
-      const defaultValue1 = getTypeDefaultValue('CreateFunctionRequest', [
-        'parent',
-      ]);
+      const defaultValue1 = getTypeDefaultValue(
+        '.google.cloud.functions.v2.CreateFunctionRequest',
+        ['parent']
+      );
       request.parent = defaultValue1;
       const expectedHeaderRequestParams = `parent=${defaultValue1}`;
       const expectedError = new Error('expected');
@@ -963,10 +991,10 @@ describe('v2.FunctionServiceClient', () => {
         new protos.google.cloud.functions.v2.UpdateFunctionRequest()
       );
       request.function ??= {};
-      const defaultValue1 = getTypeDefaultValue('UpdateFunctionRequest', [
-        'function',
-        'name',
-      ]);
+      const defaultValue1 = getTypeDefaultValue(
+        '.google.cloud.functions.v2.UpdateFunctionRequest',
+        ['function', 'name']
+      );
       request.function.name = defaultValue1;
       const expectedHeaderRequestParams = `function.name=${defaultValue1}`;
       const expectedResponse = generateSampleMessage(
@@ -997,10 +1025,10 @@ describe('v2.FunctionServiceClient', () => {
         new protos.google.cloud.functions.v2.UpdateFunctionRequest()
       );
       request.function ??= {};
-      const defaultValue1 = getTypeDefaultValue('UpdateFunctionRequest', [
-        'function',
-        'name',
-      ]);
+      const defaultValue1 = getTypeDefaultValue(
+        '.google.cloud.functions.v2.UpdateFunctionRequest',
+        ['function', 'name']
+      );
       request.function.name = defaultValue1;
       const expectedHeaderRequestParams = `function.name=${defaultValue1}`;
       const expectedResponse = generateSampleMessage(
@@ -1052,10 +1080,10 @@ describe('v2.FunctionServiceClient', () => {
         new protos.google.cloud.functions.v2.UpdateFunctionRequest()
       );
       request.function ??= {};
-      const defaultValue1 = getTypeDefaultValue('UpdateFunctionRequest', [
-        'function',
-        'name',
-      ]);
+      const defaultValue1 = getTypeDefaultValue(
+        '.google.cloud.functions.v2.UpdateFunctionRequest',
+        ['function', 'name']
+      );
       request.function.name = defaultValue1;
       const expectedHeaderRequestParams = `function.name=${defaultValue1}`;
       const expectedError = new Error('expected');
@@ -1084,10 +1112,10 @@ describe('v2.FunctionServiceClient', () => {
         new protos.google.cloud.functions.v2.UpdateFunctionRequest()
       );
       request.function ??= {};
-      const defaultValue1 = getTypeDefaultValue('UpdateFunctionRequest', [
-        'function',
-        'name',
-      ]);
+      const defaultValue1 = getTypeDefaultValue(
+        '.google.cloud.functions.v2.UpdateFunctionRequest',
+        ['function', 'name']
+      );
       request.function.name = defaultValue1;
       const expectedHeaderRequestParams = `function.name=${defaultValue1}`;
       const expectedError = new Error('expected');
@@ -1160,9 +1188,10 @@ describe('v2.FunctionServiceClient', () => {
       const request = generateSampleMessage(
         new protos.google.cloud.functions.v2.DeleteFunctionRequest()
       );
-      const defaultValue1 = getTypeDefaultValue('DeleteFunctionRequest', [
-        'name',
-      ]);
+      const defaultValue1 = getTypeDefaultValue(
+        '.google.cloud.functions.v2.DeleteFunctionRequest',
+        ['name']
+      );
       request.name = defaultValue1;
       const expectedHeaderRequestParams = `name=${defaultValue1}`;
       const expectedResponse = generateSampleMessage(
@@ -1192,9 +1221,10 @@ describe('v2.FunctionServiceClient', () => {
       const request = generateSampleMessage(
         new protos.google.cloud.functions.v2.DeleteFunctionRequest()
       );
-      const defaultValue1 = getTypeDefaultValue('DeleteFunctionRequest', [
-        'name',
-      ]);
+      const defaultValue1 = getTypeDefaultValue(
+        '.google.cloud.functions.v2.DeleteFunctionRequest',
+        ['name']
+      );
       request.name = defaultValue1;
       const expectedHeaderRequestParams = `name=${defaultValue1}`;
       const expectedResponse = generateSampleMessage(
@@ -1245,9 +1275,10 @@ describe('v2.FunctionServiceClient', () => {
       const request = generateSampleMessage(
         new protos.google.cloud.functions.v2.DeleteFunctionRequest()
       );
-      const defaultValue1 = getTypeDefaultValue('DeleteFunctionRequest', [
-        'name',
-      ]);
+      const defaultValue1 = getTypeDefaultValue(
+        '.google.cloud.functions.v2.DeleteFunctionRequest',
+        ['name']
+      );
       request.name = defaultValue1;
       const expectedHeaderRequestParams = `name=${defaultValue1}`;
       const expectedError = new Error('expected');
@@ -1275,9 +1306,10 @@ describe('v2.FunctionServiceClient', () => {
       const request = generateSampleMessage(
         new protos.google.cloud.functions.v2.DeleteFunctionRequest()
       );
-      const defaultValue1 = getTypeDefaultValue('DeleteFunctionRequest', [
-        'name',
-      ]);
+      const defaultValue1 = getTypeDefaultValue(
+        '.google.cloud.functions.v2.DeleteFunctionRequest',
+        ['name']
+      );
       request.name = defaultValue1;
       const expectedHeaderRequestParams = `name=${defaultValue1}`;
       const expectedError = new Error('expected');
@@ -1350,9 +1382,10 @@ describe('v2.FunctionServiceClient', () => {
       const request = generateSampleMessage(
         new protos.google.cloud.functions.v2.ListFunctionsRequest()
       );
-      const defaultValue1 = getTypeDefaultValue('ListFunctionsRequest', [
-        'parent',
-      ]);
+      const defaultValue1 = getTypeDefaultValue(
+        '.google.cloud.functions.v2.ListFunctionsRequest',
+        ['parent']
+      );
       request.parent = defaultValue1;
       const expectedHeaderRequestParams = `parent=${defaultValue1}`;
       const expectedResponse = [
@@ -1382,9 +1415,10 @@ describe('v2.FunctionServiceClient', () => {
       const request = generateSampleMessage(
         new protos.google.cloud.functions.v2.ListFunctionsRequest()
       );
-      const defaultValue1 = getTypeDefaultValue('ListFunctionsRequest', [
-        'parent',
-      ]);
+      const defaultValue1 = getTypeDefaultValue(
+        '.google.cloud.functions.v2.ListFunctionsRequest',
+        ['parent']
+      );
       request.parent = defaultValue1;
       const expectedHeaderRequestParams = `parent=${defaultValue1}`;
       const expectedResponse = [
@@ -1430,9 +1464,10 @@ describe('v2.FunctionServiceClient', () => {
       const request = generateSampleMessage(
         new protos.google.cloud.functions.v2.ListFunctionsRequest()
       );
-      const defaultValue1 = getTypeDefaultValue('ListFunctionsRequest', [
-        'parent',
-      ]);
+      const defaultValue1 = getTypeDefaultValue(
+        '.google.cloud.functions.v2.ListFunctionsRequest',
+        ['parent']
+      );
       request.parent = defaultValue1;
       const expectedHeaderRequestParams = `parent=${defaultValue1}`;
       const expectedError = new Error('expected');
@@ -1460,9 +1495,10 @@ describe('v2.FunctionServiceClient', () => {
       const request = generateSampleMessage(
         new protos.google.cloud.functions.v2.ListFunctionsRequest()
       );
-      const defaultValue1 = getTypeDefaultValue('ListFunctionsRequest', [
-        'parent',
-      ]);
+      const defaultValue1 = getTypeDefaultValue(
+        '.google.cloud.functions.v2.ListFunctionsRequest',
+        ['parent']
+      );
       request.parent = defaultValue1;
       const expectedHeaderRequestParams = `parent=${defaultValue1}`;
       const expectedResponse = [
@@ -1513,9 +1549,10 @@ describe('v2.FunctionServiceClient', () => {
       const request = generateSampleMessage(
         new protos.google.cloud.functions.v2.ListFunctionsRequest()
       );
-      const defaultValue1 = getTypeDefaultValue('ListFunctionsRequest', [
-        'parent',
-      ]);
+      const defaultValue1 = getTypeDefaultValue(
+        '.google.cloud.functions.v2.ListFunctionsRequest',
+        ['parent']
+      );
       request.parent = defaultValue1;
       const expectedHeaderRequestParams = `parent=${defaultValue1}`;
       const expectedError = new Error('expected');
@@ -1561,9 +1598,10 @@ describe('v2.FunctionServiceClient', () => {
       const request = generateSampleMessage(
         new protos.google.cloud.functions.v2.ListFunctionsRequest()
       );
-      const defaultValue1 = getTypeDefaultValue('ListFunctionsRequest', [
-        'parent',
-      ]);
+      const defaultValue1 = getTypeDefaultValue(
+        '.google.cloud.functions.v2.ListFunctionsRequest',
+        ['parent']
+      );
       request.parent = defaultValue1;
       const expectedHeaderRequestParams = `parent=${defaultValue1}`;
       const expectedResponse = [
@@ -1603,9 +1641,10 @@ describe('v2.FunctionServiceClient', () => {
       const request = generateSampleMessage(
         new protos.google.cloud.functions.v2.ListFunctionsRequest()
       );
-      const defaultValue1 = getTypeDefaultValue('ListFunctionsRequest', [
-        'parent',
-      ]);
+      const defaultValue1 = getTypeDefaultValue(
+        '.google.cloud.functions.v2.ListFunctionsRequest',
+        ['parent']
+      );
       request.parent = defaultValue1;
       const expectedHeaderRequestParams = `parent=${defaultValue1}`;
       const expectedError = new Error('expected');
